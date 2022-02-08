@@ -23,7 +23,6 @@ fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
 
 
 const displayData = (data) => {
-    console.log(data)
     const USD = Math.round(data.bpi.USD.rate_float);
     contenedorDolar.textContent = `${USD} USD`
 }
@@ -33,7 +32,6 @@ fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
     .then(valorArs => dataArg(valorArs))
 
     const dataArg = (valorArs) =>{
-        console.log(valorArs)
         let ARS = valorArs[0].casa.compra;
         contenedorArs.textContent = `${ARS} ARS` 
         let BLUE = valorArs[1].casa.compra;
