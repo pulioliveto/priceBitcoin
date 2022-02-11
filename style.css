@@ -6,66 +6,146 @@
     box-sizing: border-box;
     font-family: 'Oswald', sans-serif;
 }
+
 body{
-    background-color: rgb(51, 76, 160);
+    background-color: rgb(189, 189, 189);
     color:white;
+    transition: 0.5s ease all;
 }
-h4{
+
+
+
+header{
     display:Flex;
+    align-items:center;
+    flex-direction:Column;
     justify-content:center;
+}
+
+h4{
     color:rgb(255, 255, 255);
     margin-top:2px;
     text-decoration: none;
     text-shadow: 1px 1px 3px rgb(111, 0, 255);
     background-color:rgb(13, 9, 53);
     font-size:22px;
-}   
+} 
+
 a{
     color:White;
 }
+
+#switch {
+    background-color: rgb(255, 255, 255);
+    margin-top:10px;
+    border-radius:1000px;
+    padding:0px 12px;
+    border:none;
+    position:relative;
+    cursor:pointer;
+    outline:none;
+    display:block;
+    box-shadow:0px 0px 5px 1px black;
+}
+
+#switch::after{
+    content:'';
+    display:Block;
+    width:45px;
+    height:45px;
+    background:rgb(255, 255, 255);
+    position:absolute;
+    top:0;
+    left:0;
+    right:unset;
+    transition:1s;
+    border-radius:100px;
+    box-shadow: 0px 0px 5px 2px black;
+}
+
+#switch.active::after{
+    background:rgb(255, 255, 255);
+    transition:1s;
+    left:unset;
+    right:0;
+}
+
+#switch span{
+    display:inline-Block;
+    margin-left:2px;
+    margin-right:2px;
+}
+
 section{
 
     max-width:550px;
-    margin: 40px auto;
-    border:0.5px solid rgba(255, 255, 255, 0.226);
+    margin: 20px auto;
+    border:5px dashed black;
     border-radius:5px;
     text-align:center;
-
 }
+
 .container-coins{
-    margin:25px 0;
+    margin:15px 0;
     text-shadow: 1px 1px 5px black;
 }
-
 
 .contenedor-monedas{
     display:Flex;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .moneda{
     background-color: rgba(22, 236, 22, 0.788);
     padding:5px 12px;
     border-radius:100px;
-    
 }
 
 
 #fechaActual{
     font-size:26px;
-    color:rgb(200, 255, 0);
-    background-color:rgba(255, 255, 255, 0.548);
-    
+    color:black;
+    background-color:white;
 }
 
 span{
     font-size:32px;
 }
+
 .USD {
     background-color:rgba(255, 0, 0, 0.692);
 }
+
 .BLUE{
     background-color: rgba(18, 18, 240, 0.87);
 }
+
+/* MODO OSCURO  */
+
+body.dark{
+    background-color:black;
+}
+.dark h2 {
+    color:white;
+}
+
+.dark #fechaActual{
+    color:black;
+    background-color:white;
+}
+
+.dark .moneda{
+    background-color:white;
+    color:black;
+    text-shadow:none;
+}
+
+.dark h4{
+    /* background-color:White; */
+    color:rgb(255, 0, 0);
+    text-shadow:none;
+}
+.dark section{
+    border: 5px dashed white;
+} 

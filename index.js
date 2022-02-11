@@ -5,6 +5,7 @@ const contenedorDolar = document.getElementById('contenedor-usd');
 const dolarItem = document.getElementById('dolar');
 const contenedorArs = document.getElementById('contenedor-ars')
 const contenedorBlue = document.getElementById('contenedor-blue')
+const btnSwitch = document.getElementById('switch');
 
 
 let options = { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' };
@@ -37,3 +38,8 @@ fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
         let BLUE = valorArs[1].casa.compra;
         contenedorBlue.textContent = `${BLUE} ARS`
     }
+
+    btnSwitch.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        btnSwitch.classList.toggle('active');
+    })
