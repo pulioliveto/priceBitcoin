@@ -1,150 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Noto+Serif:wght@400;700&family=Oswald:wght@300;500;700&display=swap');
 
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Kanit', sans-serif;
 }
 
 body{
-    background-color: rgb(189, 189, 189);
-    color:white;
-    transition: 0.5s ease all;
+    background-image: url(/fondodark1.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 3s ease all;
 }
-
-
 
 header{
     display:Flex;
     align-items:center;
     flex-direction:Column;
     justify-content:center;
+    margin-top:5px;
 }
 
-h4{
-    color:rgb(255, 255, 255);
-    margin-top:2px;
-    text-decoration: none;
-    text-shadow: 1px 1px 3px rgb(111, 0, 255);
-    background-color:rgb(13, 9, 53);
-    font-size:22px;
-} 
-
-a{
-    color:White;
+header h3{
+    background-color:white;
+    font-size:14px;
 }
 
-#switch {
-    background-color: rgb(255, 255, 255);
-    margin-top:10px;
-    border-radius:1000px;
-    padding:0px 12px;
-    border:none;
-    position:relative;
-    cursor:pointer;
-    outline:none;
-    display:block;
-    box-shadow:0px 0px 5px 1px black;
-}
-
-#switch::after{
-    content:'';
-    display:Block;
-    width:45px;
-    height:45px;
-    background:rgb(255, 255, 255);
-    position:absolute;
-    top:0;
-    left:0;
-    right:unset;
-    transition:1s;
-    border-radius:100px;
-    box-shadow: 0px 0px 5px 2px black;
-}
-
-#switch.active::after{
-    background:rgb(255, 255, 255);
-    transition:1s;
-    left:unset;
-    right:0;
-}
-
-#switch span{
-    display:inline-Block;
-    margin-left:2px;
-    margin-right:2px;
+header figure img{
+    width:50px;
+    margin-left: 10px;
+    border-radius:10px;
 }
 
 section{
     max-width:550px;
     margin: 20px auto;
-    border:5px dashed black;
     border-radius:5px;
     text-align:center;
+    border-radius:15px;
+    box-shadow:5px 5px 15px 5px #000000;
+    background-image:url(/fondodark.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+    padding-bottom:10px;
+
+}
+section h2{
+color: #86FF2E;
+text-shadow:none;
+text-transform:uppercase;
+font-size:40px;
+}
+section p {
+    color:black;
+    border-top-left-radius:15px;
 }
 
 .container-coins{
     margin:15px 0;
-    text-shadow: 1px 1px 5px black;
-}
-
-.contenedor-monedas{
-    display:Flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.moneda{
-    background-color: rgba(22, 236, 22, 0.788);
-    padding:5px 12px;
-    border-radius:100px;
 }
 
 
 #fechaActual{
     font-size:26px;
-    color:black;
-    background-color:white;
+    color:rgb(0, 0, 0);
+    background-color:rgb(255, 255, 255);
+    
 }
 
 span{
-    font-size:32px;
-}
-
-.USD {
-    background-color:rgba(255, 0, 0, 0.692);
-}
-
-.BLUE{
-    background-color: rgba(18, 18, 240, 0.87);
-}
-
-/* MODO OSCURO  */
-
-body.dark{
-    background-color:black;
-}
-.dark h2 {
+    font-size:46px;
     color:white;
+    text-shadow:none,
 }
 
-.dark #fechaActual{
-    color:black;
-    background-color:white;
-}
 
-.dark .moneda{
-    background-color:white;
-    color:black;
-    text-shadow:none;
-}
+@media (max-width: 425px){
 
-.dark h4{
-    /* background-color:White; */
-    color:rgb(255, 0, 0);
-    text-shadow:none;
+section{
+    width: 350px;
 }
-.dark section{
-    border: 5px dashed white;
-} 
+section h2 {
+    font-size:30px;
+}
+}

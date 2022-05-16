@@ -17,26 +17,30 @@ fechaActual.innerHTML = fecha;
 
 
 // Obtenemos la info de la API 
+
+//BITCOIN ::
 fetch('https://api.coindesk.com/v1/bpi/currentprice.json') 
     .then(response => response.json())
     .then(data => displayData(data))
 
-
-
 const displayData = (data) => {
     const USD = Math.round(data.bpi.USD.rate_float);
-    contenedorDolar.textContent = `${USD} USD`
+    contenedorDolar.textContent = `${USD} U$D`
 }
 
+//________!____!__!__!
+
+
+// ARS ::
 fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
     .then(response => response.json())
     .then(valorArs => dataArg(valorArs))
 
     const dataArg = (valorArs) =>{
         let ARS = valorArs[0].casa.compra;
-        contenedorArs.textContent = `${ARS} ARS` 
+        contenedorArs.textContent = `${ARS} AR$` 
         let BLUE = valorArs[1].casa.compra;
-        contenedorBlue.textContent = `${BLUE} ARS`
+        contenedorBlue.textContent = `${BLUE} AR$`
     }
 
     btnSwitch.addEventListener('click', () => {
